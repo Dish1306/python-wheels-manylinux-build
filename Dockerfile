@@ -1,8 +1,8 @@
-FROM quay.io/pypa/manylinux2010_x86_64
+FROM quay.io/pypa/manylinux2014_aarch64
 
-ENV PLAT manylinux2010_x86_64
+ENV manylinux2014_aarch64
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT [“bash”, "/entrypoint.sh"]
